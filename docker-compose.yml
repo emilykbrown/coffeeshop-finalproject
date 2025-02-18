@@ -1,39 +1,52 @@
 version: '3.8'
 
 services:
-  coffeeapp:
-    build: .
-    container_name: coffeeapp
+  coff:
+    image: 'emilykbrown/lamp-test:latest'
+    environment:
+      - "PORT:3700"
+    ports:
+      - "80:3700"
+    volumes:
+      - ./:/src
+
+  apache:
+    image: php:8.2-apache
+    container_name: lamp_apache
+    restart: always
     ports:
       - "8080:80"
     volumes:
       - ./src:/var/www/html
     depends_on:
-      - db
+      - mysql
 
-  db:
+  mysql:
     image: mysql:8.0
-    container_name: coffeeapp-db
+    container_name: lamp_mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: coffeeapp_db
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
     ports:
       - "3306:3306"
     volumes:
-      - db_data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: coffeeapp-phpmyadmin
+    container_name: lamp_phpmyadmin
     restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: systemadmin
+      PMA_PASSWORD: root
     ports:
       - "8081:80"
-    environment:
-      PMA_HOST: phpmyadmin
-      MYSQL_ROOT_PASSWORD: root
+    depends_on:
+      - mysql
 
 volumes:
-  db_data:
+  mysql_data:
