@@ -1,37 +1,21 @@
-# Use an official PHP + Apache image as the base
-FROM php:8.1-apache
+# Use official PHP with Apache
+FROM php:8.2-apache
 
-# Install required dependencies
-RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    zip \
-    unzip \
-    curl \
-    mariadb-client \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd mysqli pdo pdo_mysql \
-    && a2enmod rewrite \
-    && service apache2 restart
+# Install MySQL extension
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Set new Document Root
-WORKDIR /var/www/src
+# Enable Apache mod_rewrite
+RUN a2enmod rewrite
 
-# Copy project files
-COPY . /var/www/
+# Set working directory
+WORKDIR /var/www/html
 
-# Set correct permissions
-RUN chown -R www-data:www-data /var/www/ \
-    && chmod -R 755 /var/www/
+# Copy project files to Apache root
+COPY . /var/www/html
 
-# Update Apache configuration to use `src` as DocumentRoot
-RUN sed -i 's|/var/www/html|/var/www/src|g' /etc/apache2/sites-available/000-default.conf \
-    && sed -i 's|/var/www/html|/var/www/src|g' /etc/apache2/apache2.conf \
-    && service apache2 restart
+# Provide necessary permissions
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
 
-# Expose the Apache port
+# Expose port 80 for Apache
 EXPOSE 80
-
-# Start Apache in the foreground
-CMD ["apache2-foreground"]

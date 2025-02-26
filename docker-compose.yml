@@ -1,29 +1,20 @@
 version: '3.8'
 
 services:
-  coff:
-    image: 'emilykbrown/lamp-test:latest'
-    environment:
-      - "PORT:3700"
+  web:
+    build: .
+    image: amalan:latest  # Specify image name and tag
+    container_name: apache_php
     ports:
-      - "80:3700"
-    volumes:
-      - ./:/src
-
-  apache:
-    image: php:8.2-apache
-    container_name: lamp_apache
-    restart: always
-    ports:
-      - "8080:80"
-    volumes:
-      - ./src:/var/www/html
+      - "8082:80"  # Changed from 8080 to 8082 to avoid port conflicts
     depends_on:
-      - mysql
+      - db
+    volumes:
+      - .:/var/www/html
 
-  mysql:
+  db:
     image: mysql:8.0
-    container_name: lamp_mysql
+    container_name: mysql_db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
@@ -32,21 +23,15 @@ services:
       MYSQL_PASSWORD: mypassword
     ports:
       - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: lamp_phpmyadmin
+    container_name: phpmyadmin
     restart: always
-    environment:
-      PMA_HOST: mysql
-      PMA_USER: systemadmin
-      PMA_PASSWORD: root
-    ports:
-      - "8081:80"
     depends_on:
-      - mysql
-
-volumes:
-  mysql_data:
+      - db
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "8081:80"  # Maps phpMyAdmin to port 8081
