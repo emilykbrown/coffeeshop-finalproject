@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    image: amalan:latest  # Specify image name and tag
+    image: emilykbrown/coffeeshop:latest
     container_name: apache_php
     ports:
       - "8082:80"  # Changed from 8080 to 8082 to avoid port conflicts
