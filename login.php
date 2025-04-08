@@ -161,8 +161,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 				</div>
 
 				<div class="col">
-					<input type="checkbox" name="newsletter" class="form-control" id="newsletter">
-					<label for="newsletter">not sure why this is stretched out, will fix later</label>
+					<input type="checkbox" name="newsletter" id="newsletter">
 				</div>
 			</div>
 
