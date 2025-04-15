@@ -27,20 +27,136 @@
 
 <div class="container-fluid">
 
-	<div class="row">
+	<div class="card shadow p-3 rounded">
 
-		<div class="col">		
-			<div class="card shadow p-3 rounded">
+		<p class="text-left"><b><font size="+5">Our Menu</font></b></p>
 
-				<p class="text-left"><b><font size="+5">Our Menu</font></b></p>
+		<div class="card-body">
+			<div class="container-fluid">
 
-				<div class="card-body">
-					<div class="container-fluid">
-						<?php 
+				<div class="row">
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Latte</font></b></p>
+							<img src="/assets/images/coffee-placeholder.png" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>				
+						</div>
+					</div>
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Cappuccino</font></b></p>
+							<img src="/assets/images/coffee-placeholder.jpg" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Mocha</font></b></p>
+							<img src="/assets/images/coffee-placeholder.jpg" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
 
-						//cards for each drink
-						
-						?>
+				<br>
+
+				<div class="row">
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Americano</font></b></p>
+							<img src="/assets/images/coffee-placeholder.png" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>				
+						</div>
+					</div>
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Dark Roast</font></b></p>
+							<img src="/assets/images/coffee-placeholder.jpg" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Light Roast</font></b></p>
+							<img src="/assets/images/coffee-placeholder.jpg" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<br>
+
+				<div class="row">
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Espresso</font></b></p>
+							<img src="/assets/images/coffee-placeholder.png" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>				
+						</div>
+					</div>
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Hot Chocolate</font></b></p>
+							<img src="/assets/images/coffee-placeholder.jpg" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Chai Latte</font></b></p>
+							<img src="/assets/images/coffee-placeholder.jpg" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<br>
+
+				<div class="row">
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Matcha Latte</font></b></p>
+							<img src="/assets/images/coffee-placeholder.png" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>				
+						</div>
+					</div>
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Earl Grey Tea</font></b></p>
+							<img src="/assets/images/coffee-placeholder.jpg" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card shadow p-3 rounded">
+							<p class="text-left"><b><font size="+2">Green Tea</font></b></p>
+							<img src="/assets/images/coffee-placeholder.jpg" class="img-fluid">
+							<div class="container mt-3">
+								<button type="submit" class="btn btn-primary text-white">Add to Order  <i class="fas fa-coffee"></i></button>
+							</div>
+						</div>
 					</div>
 				</div>
 
