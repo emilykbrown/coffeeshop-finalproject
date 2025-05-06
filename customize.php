@@ -25,7 +25,41 @@
 
 <body>
 
-<div style="background-color: white;"><h1>Navbar here later</h1></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand mb-0 h3" style="text-indent: 25px;" href="#">The Artists' Grounds</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  	</button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+    	<li>
+      		<a class="nav-item nav-link" href="index.php">Home</a>
+      	</li>
+      	<li>
+      		<a class="nav-item nav-link active" href="menu.php">Menu</a>
+      	</li>
+      	<li>
+      		<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Events</a>
+      	</li>
+      	<li>
+      		<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Gallery</a>
+      	</li>
+      	<li>
+      		<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Meet The Artists</a>
+      	</li>
+    </ul>
+    <ul class="navbar-nav ms-auto flex-row">
+        <li class="nav-item">
+            <a class="nav-item nav-link justify-content-end" href="login.php">Log in</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-item nav-link justify-content-end" href="signup.php">Sign up</a>
+        </li>
+      </ul>
+
+	
+</nav>
+<br>
 
 <div class="container-fluid">
 
@@ -41,7 +75,7 @@
 						<form>
 						<div class="row">
 							<div class="col">
-								<img src="assets/images/macchiato_placeholder.jpg">
+								<img src="assets/images/latte-big.png">
 							</div>
 							<div class="col">
 								<h3>Size & Milk:</h3>

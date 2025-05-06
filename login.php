@@ -90,7 +90,42 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 
 <body>
 
-<div style="background-color: white;"><h1>Navbar here later</h1></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand mb-0 h3" style="text-indent: 25px;" href="#">The Artists' Grounds</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  	</button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+    	<li>
+      		<a class="nav-item nav-link" href="#">Home</a>
+      	</li>
+      	<li>
+      		<a class="nav-item nav-link" href="menu.php">Menu</a>
+      	</li>
+      	<li>
+      		<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Events</a>
+      	</li>
+      	<li>
+      		<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Gallery</a>
+      	</li>
+      	<li>
+      		<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Meet The Artists</a>
+      	</li>
+    </ul>
+    <ul class="navbar-nav ms-auto flex-row">
+        <li class="nav-item">
+            <a class="nav-item nav-link active justify-content-end" href="login.php">Log in</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-item nav-link justify-content-end" href="signup.php">Sign up</a>
+        </li>
+      </ul>
+
+	
+</nav>
+
+<br>
 
 <div class="container mt-3">
 
@@ -136,43 +171,9 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 
 			</div>
 
-			<!-- Confirm Password -->
-			<div class="row">
-
-				<div class="col">
-			    	<div class="container "><p class="text" align="right"><b><font size="+1">Confirm Password</font></b></p></div>
-				</div>
-
-				<div class="col">
-			    <div class="input-group mb-3">
-			    	<span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
-						<input type="text" name='confirmPassword' class="form-control" placeholder="Confirm Password" id='confirmPassword'>
-					</div>
-					<span class="error"><?php echo $confirmPasswordError ?></span>
-				</div>
-
-			</div>
-
-			<!-- Newsletter signup -->
-			<div class="row">
-
-				<div class="col">
-					<div class="container "><p class="text" align="right"><b><font size="+1">Sign up for our newsletter?</font></b></p></div>
-				</div>
-
-				<div class="col">
-					<input type="checkbox" name="newsletter" class="form-control" id="newsletter">
-					<label for="newsletter">not sure why this is stretched out, will fix later</label>
-				</div>
-			</div>
-
-			<div class="row">
-				<p>not really loving the centered look on this, will probably change it later</p>
-			</div>
-
 			<!-- Submit button -->
 			<div class="container mt-3">
-		    	<div class ="text-center"><button type="submit" class="btn btn-warning text-white">SUBMIT  <i class="fas fa-paper-plane"></i></button></div>
+		    	<div class ="text-center"><button type="submit" class="btn btn-primary text-white">SUBMIT  <i class="fas fa-paper-plane"></i></button></div>
 		  	</div>
 		
 		</form>
